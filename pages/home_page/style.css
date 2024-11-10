@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,500;1,500&display=swap');
+
+body{
+    background: rgb(49,54,63);
+    background: linear-gradient(180deg, rgba(49,54,63,1) 0%, rgba(118,171,174,1) 50%, rgba(230,230,230,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.logo {
+    font-family: 'Host Grotestk', sans-serif;
+    color: white;
+}
