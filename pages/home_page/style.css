@@ -1,15 +1,174 @@
-@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,500;1,500&display=swap');
-
-body{
-    background: rgb(49,54,63);
+body {
     background: linear-gradient(180deg, rgba(49,54,63,1) 0%, rgba(118,171,174,1) 50%, rgba(230,230,230,1) 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    font-family: "Host Grotesk", sans-serif;
+    --color1: #FFF;
+    --color2: #04040400;
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
 }
 
-.logo {
-    font-family: 'Host Grotestk', sans-serif;
-    color: white;
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--color2);
+    padding: 0;
+}
+
+.nav-bar {
+    width: 95%;
+    height: 30px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    background-color: var(--color2);
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    padding-left: 30px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}
+
+.open-menu, .close-menu {
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 610px) {
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--color2);
+        transition: all 0.3s ease;
+    }
+
+    .menu li {
+        margin-top: 40px;
+        padding-left: 0;
+    }
+
+    .open-menu, .close-menu {
+        display: block;
+        position: absolute;
+    }
+
+    .open-menu {
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+
+    .close-menu {
+        top: 20px;
+        right: 20px;
+    }
+
+    #check:checked ~ .menu {
+        right: 0;
+    }
+}
+
+.descricao {
+    width: 100%;  
+    max-width: 600px;  
+    margin: 50px 0 0 0; 
+    padding: 20px;
+    padding-top: 185px; 
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.desc {
+    text-align: left; 
+}
+
+.destaque {
+    color: #4ECBD2;
+}
+
+.email{
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 5px 5px 5px rgb(103, 103, 103);
+}
+
+.testar {
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 5px rgb(103, 103, 103);
+    cursor: pointer;
+    background-color: #4ECBD2;
+    transition: transform 200ms ease-in-out;
+}
+
+.testar:hover {
+    transform: scale(1.05);
 }
