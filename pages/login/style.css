@@ -203,6 +203,20 @@ header {
     width: 100%;
 }
 
+/* Adicionando o efeito de sublinhado apenas para HOME, PLANOS e SOBRE */
+.menu li:nth-child(1) a::after, /* HOME */
+.menu li:nth-child(2) a::after, /* PLANOS */
+.menu li:nth-child(3) a::after { /* SOBRE */
+    height: 2px; /* Tamanho do sublinhado */
+    background-color: #ffffff; /* Cor do sublinhado, ajuste como preferir */
+}
+
+.menu li:nth-child(1) a:hover::after,
+.menu li:nth-child(2) a:hover::after,
+.menu li:nth-child(3) a:hover::after {
+    width: 100%;
+}
+
 .open-menu, .close-menu {
     color: var(--color1);
     cursor: pointer;

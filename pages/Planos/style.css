@@ -2,7 +2,8 @@
 
 body {
     width: 100%;
-    margin: 0;
+    margin: auto;
+    padding: 0%;
     background: rgb(49,54,63);
     background: linear-gradient(180deg, rgba(49,54,63,1) 0%, rgba(118,171,174,1) 50%, rgba(230,230,230,1) 100%);
     display: flex;
@@ -11,6 +12,7 @@ body {
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
+
 header {
     width: 100%;
     position: fixed;
@@ -19,6 +21,12 @@ header {
     z-index: 1000;
     background-color: var(--color2);
     padding: 0;
+}
+
+
+:root {
+    --color1: #f8f9fa;
+    --color2: #343a40;
 }
 
 .nav-bar {
@@ -60,6 +68,7 @@ header {
     letter-spacing: 2px;
 }
 
+
 .menu li a::after {
     content: "";
     position: absolute;
@@ -97,7 +106,6 @@ header {
         height: 100vh;
         background-color: var(--color2);
         transition: all 0.3s ease;
-
     }
 
     .menu li {
@@ -139,7 +147,7 @@ header {
     font-size: 14px;
     border-radius: 15px;
     padding-top: 20px;
-    margin: 80px;
+    margin: 20px;
     height: auto;
     max-width: 330px;
 }
@@ -180,5 +188,4 @@ header {
     justify-content: center;
     align-items: center;
     margin: 20px auto;
-    }
-    
+}
