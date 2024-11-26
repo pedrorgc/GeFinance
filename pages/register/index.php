@@ -20,7 +20,7 @@ if (file_exists($path)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registrar</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +37,7 @@ if (file_exists($path)) {
                 <div class="menu">
                     <li><a href="/GeFinance/pages/home_page/index.php">Home</a></li>
                     <li><a href="/GeFinance/pages/Planos/index.php">Planos</a></li>
+                    <li><a href="/GeFinance/pages/login/index.php">Login</a></li>
                     <li><a href="#">Sobre</a></li>
                     <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
                 </div>
@@ -44,34 +45,28 @@ if (file_exists($path)) {
         </nav>
     </header>
     <form action="" method="POST">
-        <div class="login-box">
-            <div class="login-header">
-                <h1 style="color: white;">Login</h1>
+        <div class="register-box">
+            <div class="register-header">
+                <h1 style="color: white;">Registrar</h1>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" id="nome" placeholder="Nome Completo" autocomplete="off" required>
             </div>
             <div class="input-box">
                 <input type="text" class="input-field" id="email" placeholder="Email" autocomplete="off" required>
             </div>
             <div class="input-box">
+                <input type="text" class="input-field" id="confirm-email" placeholder="Confirmar Email" autocomplete="off" required>
+            </div>
+            <div class="input-box">
                 <input type="password" class="input-field" id="senha" placeholder="Senha" autocomplete="off" required>
             </div>
-            <div class="forgot">
-                <section>
-                    <input type="checkbox" id="check">
-                    <label for="check">Lembrar deste dispositivo</label>
-                </section>
-                <section>
-                    <a href="#">Esqueceu a senha?</a>
-                </section>
+            <div class="input-box">
+                <input type="password" class="input-field" id="confirm-senha" placeholder="Confirmar Senha" autocomplete="off" required>
             </div>
             <div class="input-submit">
                 <button class="submit-btn" id="submit"></button>
-                <label for="submit">Entrar</label>
-            </div>
-            <div class="google-login">
-                <button class="login-google" id="login">Entrar com Google</button>
-            </div>
-            <div class="sign-up-link">
-                <p>Não Possui uma conta? <a href="/GeFinance/pages/register/index.php" class="register">Registre-se</a></p>
+                <label for="submit">Registrar</label>
             </div>
         </div>
     </form>
