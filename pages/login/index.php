@@ -32,7 +32,7 @@ if (file_exists($path)) {
         <nav>
             <ul class="nav-bar">
                 <li class="logo"><a href="/pages/home_page/index.php"><img src="GF (1).png" alt="Logo"></a></li>
-                <input type="checkbox" id="check" />
+                <input type="checkbox" id="check"/>
                 <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
                 <div class="menu">
                     <li><a href="/GeFinance/pages/home_page/index.php">Home</a></li>
