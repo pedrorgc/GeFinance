@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background: rgb(49,54,63);
+    background: linear-gradient(180deg, rgba(49,54,63,1) 0%, rgba(118,171,174,1) 50%, rgba(230,230,230,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.register-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 440px;
+    height: 480px;
+    padding: 30px;
+}
+.register-header{
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+.register-header header{
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+}
+.input-box .input-field{
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0, 0.05);
+    outline: none;
+    transition: .3s;
+}
+::placeholder{
+    font-weight: 500;
+    color: #222;
+}
+.input-field:focus{
+    width: 105%;
+}
+.forgot{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+section{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #ffffff;
+}
+#check{
+    margin-right: 10px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+section a{
+    color: #ffffff;
+}
+.input-submit{
+    position: relative;
+}
+.submit-btn{
+    width: 100%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+.input-submit label{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    color: #fff;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.submit-btn:hover{
+    background: #000;
+    transform: scale(1.05,1);
+}
+.sign-up-link{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.sign-up-link a{
+    color: #000;
+    font-weight: 600;
+}
+
+.container-fluid {
+    color: transparent;
+}
+
+.register:hover {
+    color: white;
+}
+
+header {
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--color2);
+    padding: 0;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    background-color: var(--color2);
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    padding-left: 30px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}
+
+.menu li:nth-child(1) a::after,
+.menu li:nth-child(2) a::after,
+.menu li:nth-child(3) a::after {
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.menu li:nth-child(1) a:hover::after,
+.menu li:nth-child(2) a:hover::after,
+.menu li:nth-child(3) a:hover::after {
+    width: 100%;
+}
+
+.open-menu, .close-menu {
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 610px) {
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--color2);
+        transition: all 0.3s ease;
+    }
+
+    .menu li {
+        margin-top: 40px;
+        padding-left: 0;
+    }
+
+    .open-menu, .close-menu {
+        display: block;
+        position: absolute;
+    }
+
+    .open-menu {
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+
+    .close-menu {
+        top: 20px;
+        right: 20px;
+    }
+
+    #check:checked ~ .menu {
+        right: 0;
+    }
+}
